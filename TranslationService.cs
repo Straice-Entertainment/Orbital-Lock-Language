@@ -8,9 +8,7 @@ public class TranslationService
 
         AddTranslation("en", "homelabel999", "");
         AddTranslation("es", "homelabel999", "");
-        AddTranslation("fr", "homelabel999", "");
-        AddTranslation("it", "homelabel999", "");
-        AddTranslation("de", "homelabel999", "");
+        //ISO 639-1 Language, Identificator, Text
     }
 
     public string Translate(string languageCode, string key)
