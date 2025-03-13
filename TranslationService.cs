@@ -11,6 +11,16 @@ public class TranslationService
         //ISO 639-1 Language, Identificator, Text
     }
 
+    private void AddTranslation(string languageCode, string key, string value)
+    {
+        if (!_translations.ContainsKey(languageCode))
+        {
+            _translations[languageCode] = new Dictionary<string, string>();
+        }
+
+        _translations[languageCode][key] = value;
+    }
+
     public string Translate(string languageCode, string key)
     {
         if (_translations.ContainsKey(languageCode) && _translations[languageCode].ContainsKey(key))
